@@ -2,10 +2,12 @@
 <html lang="en">
 
 <head>
+
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<meta name="title" content="For Ajees ❤️">
-<meta name="author" content="Made with Emotions ❤️">
+
+  <meta name="title" content="For Ajees ❤️">
+  <meta name="author" content="Made with Emotions ❤️">
 
   <title>For Ajees ❤️</title>
 
@@ -13,357 +15,397 @@
     rel="stylesheet">
 
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: 'Poppins', sans-serif;
+
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family:'Poppins',sans-serif;
     }
 
-    body {
-      background: linear-gradient(135deg, #2a0010, #5b0f24, #7c1735);
-      min-height: 100vh;
-      overflow-x: hidden;
-      color: white;
-      position: relative;
+    body{
+      background:linear-gradient(135deg,#2a0010,#5b0f24,#7c1735);
+      min-height:100vh;
+      overflow-x:hidden;
+      color:white;
+      position:relative;
     }
 
     /* Floating Hearts */
 
-    .heart {
-      position: fixed;
-      bottom: -20px;
-      color: rgba(255, 255, 255, 0.3);
-      animation: float 8s linear infinite;
-      z-index: 0;
+    .heart{
+      position:fixed;
+      bottom:-20px;
+      color:rgba(255,255,255,0.3);
+      animation:float 8s linear infinite;
+      z-index:0;
     }
 
-    @keyframes float {
-      0% {
-        transform: translateY(0) scale(0);
-        opacity: 0;
+    @keyframes float{
+
+      0%{
+        transform:translateY(0) scale(0);
+        opacity:0;
       }
 
-      50% {
-        opacity: 1;
+      50%{
+        opacity:1;
       }
 
-      100% {
-        transform: translateY(-120vh) scale(1.5);
-        opacity: 0;
+      100%{
+        transform:translateY(-120vh) scale(1.5);
+        opacity:0;
       }
     }
 
-    /* Main Container */
+    /* Main Section */
 
-    .container {
-      min-height: 100vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      padding: 20px;
-      position: relative;
-      z-index: 2;
+    .container{
+      min-height:100vh;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      padding:20px;
+      position:relative;
+      z-index:2;
     }
 
-    .card {
-      width: 100%;
-      max-width: 720px;
-      background: rgba(255, 255, 255, 0.08);
-      backdrop-filter: blur(12px);
-      border: 1px solid rgba(255, 255, 255, 0.15);
-      border-radius: 30px;
-      padding: 45px 30px;
-      text-align: center;
-      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
-      animation: fadeIn 1.5s ease;
+    .card{
+      width:100%;
+      max-width:720px;
+      background:rgba(255,255,255,0.08);
+      backdrop-filter:blur(12px);
+      border:1px solid rgba(255,255,255,0.15);
+      border-radius:30px;
+      padding:45px 30px;
+      text-align:center;
+      box-shadow:0 15px 40px rgba(0,0,0,0.4);
+      animation:fadeIn 1.5s ease;
     }
 
-    .small-text {
-      color: #ffd9e3;
-      letter-spacing: 3px;
-      font-size: 13px;
-      margin-bottom: 15px;
+    .small-text{
+      color:#ffd9e3;
+      letter-spacing:3px;
+      font-size:13px;
+      margin-bottom:15px;
     }
 
-    h1 {
-      font-size: 3rem;
-      margin-bottom: 20px;
-      line-height: 1.3;
+    h1{
+      font-size:3rem;
+      margin-bottom:20px;
+      line-height:1.3;
     }
 
-    .highlight {
-      color: #ffb6c9;
+    .highlight{
+      color:#ffb6c9;
     }
 
-    .intro {
-      line-height: 2;
-      color: #ffe9ef;
-      font-size: 1rem;
-      margin-bottom: 30px;
+    .intro{
+      line-height:2;
+      color:#ffe9ef;
+      font-size:1rem;
+      margin-bottom:30px;
     }
 
-    .btn {
-      padding: 15px 35px;
-      border: none;
-      border-radius: 50px;
-      background: #ffd1dc;
-      color: #6b0f2f;
-      font-size: 1rem;
-      font-weight: 600;
-      cursor: pointer;
-      transition: 0.4s;
+    .btn{
+      padding:15px 35px;
+      border:none;
+      border-radius:50px;
+      background:#ffd1dc;
+      color:#6b0f2f;
+      font-size:1rem;
+      font-weight:600;
+      cursor:pointer;
+      transition:0.4s;
     }
 
-    .btn:hover {
-      transform: scale(1.08);
-      background: white;
+    .btn:hover{
+      transform:scale(1.08);
+      background:white;
     }
 
     /* Popup */
 
-    .popup {
-      position: fixed;
-      inset: 0;
-      background: rgba(0, 0, 0, 0.75);
-      display: none;
-      justify-content: center;
-      align-items: center;
-      z-index: 100;
-      padding: 20px;
-      overflow-y: auto;
+    .popup{
+      position:fixed;
+      inset:0;
+      background:rgba(0,0,0,0.75);
+      display:none;
+      justify-content:center;
+      align-items:center;
+      z-index:100;
+      padding:20px;
+      overflow-y:auto;
     }
 
-    .popup-content {
-      background: linear-gradient(135deg, #5b0f24, #7c1735);
-      width: 100%;
-      max-width: 520px;
-      padding: 40px 25px;
-      border-radius: 30px;
-      text-align: center;
-      animation: popupShow 0.8s ease;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-      position: relative;
-      overflow-y: auto;
-      max-height: 90vh;
+    .popup-content{
+      background:linear-gradient(135deg,#5b0f24,#7c1735);
+      width:100%;
+      max-width:520px;
+      padding:40px 25px;
+      border-radius:30px;
+      text-align:center;
+      animation:popupShow 0.8s ease;
+      box-shadow:0 10px 30px rgba(0,0,0,0.5);
+      position:relative;
+      overflow-y:auto;
+      max-height:90vh;
     }
 
-    @keyframes popupShow {
-      from {
-        transform: scale(0.6);
-        opacity: 0;
+    @keyframes popupShow{
+
+      from{
+        transform:scale(0.6);
+        opacity:0;
       }
 
-      to {
-        transform: scale(1);
-        opacity: 1;
+      to{
+        transform:scale(1);
+        opacity:1;
       }
     }
 
-    .popup h2 {
-      font-size: 2rem;
-      margin-bottom: 20px;
-      color: #ffd6df;
+    .popup h2{
+      font-size:2rem;
+      margin-bottom:20px;
+      color:#ffd6df;
     }
 
-    .popup p {
-      line-height: 2;
-      color: #fff0f5;
-      margin-bottom: 15px;
-      font-size: 0.98rem;
+    .popup p{
+      line-height:2;
+      color:#fff0f5;
+      margin-bottom:15px;
+      font-size:0.98rem;
     }
 
-    .final-question {
-      margin-top: 25px;
-      font-size: 1.6rem;
-      line-height: 1.5;
-      font-weight: 600;
+    .final-question{
+      margin-top:25px;
+      font-size:1.6rem;
+      line-height:1.5;
+      font-weight:600;
     }
 
     /* Buttons */
 
-    .button-group {
-      position: relative;
-      width: 100%;
-      height: 150px;
-      margin-top: 30px;
+    .button-group{
+      position:relative;
+      width:100%;
+      height:150px;
+      margin-top:30px;
     }
 
     .yes-btn,
-    .no-btn {
-      padding: 14px 28px;
-      border: none;
-      border-radius: 50px;
-      font-size: 1rem;
-      font-weight: 600;
-      cursor: pointer;
-      position: absolute;
-      transition: 0.3s;
+    .no-btn{
+      padding:14px 28px;
+      border:none;
+      border-radius:50px;
+      font-size:1rem;
+      font-weight:600;
+      cursor:pointer;
+      position:absolute;
+      transition:0.3s;
     }
 
-    .yes-btn {
-      background: white;
-      color: #7c1735;
-      left: 18%;
-      top: 0;
+    .yes-btn{
+      background:white;
+      color:#7c1735;
+      left:18%;
+      top:0;
     }
 
-    .yes-btn:hover {
-      transform: scale(1.08);
+    .yes-btn:hover{
+      transform:scale(1.08);
     }
 
-    .no-btn {
-      background: #ffd1dc;
-      color: #7c1735;
-      left: 58%;
-      top: 0;
+    .no-btn{
+      background:#ffd1dc;
+      color:#7c1735;
+      left:58%;
+      top:0;
     }
 
-    .no-btn:hover {
-      background: white;
+    .no-btn:hover{
+      background:white;
     }
 
-    /* Final Message */
+    /* Final Popup */
 
-    .final-screen {
-      display: none;
-      margin-top: 30px;
-      animation: fadeIn 1s ease;
+    .love{
+      font-size:60px;
+      animation:pulse 1s infinite;
+      margin-bottom:15px;
     }
 
-    .love {
-      font-size: 60px;
-      animation: pulse 1s infinite;
-      margin-bottom: 15px;
-    }
+    @keyframes pulse{
 
-    @keyframes pulse {
-      0% {
-        transform: scale(1);
+      0%{
+        transform:scale(1);
       }
 
-      50% {
-        transform: scale(1.2);
+      50%{
+        transform:scale(1.2);
       }
 
-      100% {
-        transform: scale(1);
+      100%{
+        transform:scale(1);
       }
     }
 
-    .final-screen h1 {
-      font-size: 2.4rem;
-      margin-bottom: 15px;
-      color: #ffd6df;
+    .special-line{
+      margin-top:25px;
+      color:#ffd6df;
+      line-height:1.8;
+      font-size:1.5rem;
+      font-weight:600;
     }
 
-    .final-screen p {
-      line-height: 2;
-      color: #fff0f5;
+    .thank-you{
+      margin-top:30px;
+      font-size:1.1rem;
+      color:#ffd6df;
+      font-weight:600;
     }
 
-    .special-line {
-      margin-top: 25px;
-      color: #ffd6df;
-      line-height: 1.8;
-      font-size: 1.5rem;
-      font-weight: 600;
+    /* Heart Image */
+
+    .heart-image-container{
+      margin-bottom:25px;
     }
 
-    .thank-you {
-      margin-top: 30px;
-      font-size: 1.1rem;
-      color: #ffd6df;
-      font-weight: 600;
+    .heart-image{
+      font-size:75px;
+      cursor:pointer;
+      animation:pulse 1.2s infinite;
+      transition:0.3s;
     }
 
-    /* Fade Animation */
+    .heart-image:hover{
+      transform:scale(1.15);
+    }
 
-    @keyframes fadeIn {
-      from {
-        opacity: 0;
-        transform: translateY(20px);
+    .tap-text{
+      margin-top:10px;
+      color:#ffd6df;
+      font-size:0.95rem;
+    }
+
+    /* Image Popup */
+
+    .image-popup-content{
+      max-width:400px;
+      padding:15px;
+      position:relative;
+    }
+
+    .love-image{
+      width:100%;
+      border-radius:20px;
+      object-fit:cover;
+    }
+
+    .close-btn{
+      position:absolute;
+      top:10px;
+      right:15px;
+      font-size:22px;
+      cursor:pointer;
+      color:white;
+      z-index:10;
+    }
+
+    /* Animation */
+
+    @keyframes fadeIn{
+
+      from{
+        opacity:0;
+        transform:translateY(20px);
       }
 
-      to {
-        opacity: 1;
-        transform: translateY(0);
+      to{
+        opacity:1;
+        transform:translateY(0);
       }
     }
 
-    /* Mobile Responsive */
+    /* Mobile */
 
-    @media(max-width:768px) {
+    @media(max-width:768px){
 
-      .card {
-        padding: 35px 20px;
+      .card{
+        padding:35px 20px;
       }
 
-      h1 {
-        font-size: 2.2rem;
+      h1{
+        font-size:2.2rem;
       }
 
-      .popup-content {
-        padding: 35px 20px;
+      .popup-content{
+        padding:35px 20px;
       }
 
-      .popup h2 {
-        font-size: 1.6rem;
+      .popup h2{
+        font-size:1.6rem;
       }
 
-      .final-question {
-        font-size: 1.3rem;
+      .final-question{
+        font-size:1.3rem;
       }
 
       .yes-btn,
-      .no-btn {
-        font-size: 0.9rem;
-        padding: 12px 20px;
+      .no-btn{
+        font-size:0.9rem;
+        padding:12px 20px;
       }
 
-      .yes-btn {
-        left: 10%;
+      .yes-btn{
+        left:10%;
       }
 
-      .no-btn {
-        left: 55%;
+      .no-btn{
+        left:55%;
       }
 
-      .final-screen h1 {
-        font-size: 2rem;
+      .special-line{
+        font-size:1.2rem;
       }
 
-      .love {
-        font-size: 50px;
-      }
-
-      .special-line {
-        font-size: 1.2rem;
+      .heart-image{
+        font-size:65px;
       }
     }
+
   </style>
 
 </head>
 
 <body>
 
+  <!-- Background Music -->
+
+  <audio id="bg-music" loop autoplay>
+
+    <source src="Ajees.mp3" type="audio/mp3">
+
+  </audio>
+
   <!-- Floating Hearts -->
 
   <script>
 
-    for (let i = 0; i < 60; i++) {
+    for(let i=0;i<60;i++){
 
-      let heart = document.createElement("div");
+      let heart=document.createElement("div");
 
       heart.classList.add("heart");
 
-      heart.innerHTML = "❤";
+      heart.innerHTML="❤";
 
-      heart.style.left = Math.random() * 100 + "vw";
+      heart.style.left=Math.random()*100+"vw";
 
-      heart.style.fontSize = (Math.random() * 20 + 10) + "px";
+      heart.style.fontSize=(Math.random()*20+10)+"px";
 
-      heart.style.animationDuration = (Math.random() * 5 + 5) + "s";
+      heart.style.animationDuration=(Math.random()*5+5)+"s";
 
       document.body.appendChild(heart);
     }
@@ -421,169 +463,199 @@
 
   </div>
 
-  <!-- Popup -->
+  <!-- First Popup -->
 
- <!-- First Popup -->
+  <div class="popup" id="popup">
 
-<div class="popup" id="popup">
+    <div class="popup-content">
 
-  <div class="popup-content">
+      <h2>One More Thing... ❤️</h2>
 
-    <h2>One More Thing... ❤️</h2>
+      <p>
+        I never expected someone far away
+        could make me feel this loved,
+        this safe,
+        and this happy.
+      </p>
 
-    <p>
-      I never expected someone far away
-      could make me feel this loved,
-      this safe,
-      and this happy.
-    </p>
+      <p>
+        Somewhere between our conversations...
+        I slowly fell in love with you ❤️
+      </p>
 
-    <p>
-      Somewhere between our conversations...
-      I slowly fell in love with you ❤️
-    </p>
+      <p>
+        Not suddenly.
+        Softly.
+        Deeply.
+        Truly ❤️
+      </p>
 
-    <p>
-      Not suddenly.
-      Softly.
-      Deeply.
-      Truly ❤️
-    </p>
+      <div class="final-question">
 
-    <div class="final-question">
-      So Ajees...
-      will you stay with me forever? ❤️
-    </div>
+        So Ajees...
+        will you stay with me forever? ❤️
 
-    <!-- Buttons -->
+      </div>
 
-    <div class="button-group">
+      <div class="button-group">
 
-      <button class="yes-btn" onclick="openFinalPopup()">
-        Yes Forever ❤️
-      </button>
+        <button class="yes-btn" onclick="openFinalPopup()">
+          Yes Forever ❤️
+        </button>
 
-      <button class="no-btn" id="noBtn">
-        No 😶
-      </button>
+        <button class="no-btn" id="noBtn">
+          No 😶
+        </button>
 
-    </div>
-
-  </div>
-
-</div>
-
-<!-- Second Popup -->
-
-<div class="popup" id="finalPopup">
-
-  <div class="popup-content">
-
-    <div class="love">❤️</div>
-
-    <h1 style="font-size:2.2rem; color:#ffd6df;">
-      YAYYYYY ❤️✨
-    </h1>
-
-    <p>
-
-      Finallyyyyy 💖
-
-      <br><br>
-
-      You have no idea
-      how happy this makes me right now...
-
-      <br><br>
-
-      From random conversations
-      to becoming each other's favorite person...
-
-      everything about us feels special ❤️
-
-    </p>
-
-    <p>
-
-      Even though we are far away,
-      you always feel close to my heart.
-
-      <br><br>
-
-      Your messages,
-      your care,
-      your voice,
-      your presence...
-
-      became my comfort on hard days
-      and my happiness on good days ✨
-
-    </p>
-
-    <div class="special-line">
-
-      I want you in my life  
-      till my death ❤️
-
-    </div>
-
-    <p style="margin-top:25px;">
-
-      I want us to grow together,
-      support each other,
-      fight and solve things together,
-      and create beautiful memories together ✨
-
-      <br><br>
-
-      One day...
-      this distance will end ❤️
-
-    </p>
-
-    <div class="thank-you">
-
-      Thank you for choosing me ❤️
+      </div>
 
     </div>
 
   </div>
 
-</div>
+  <!-- Second Popup -->
+
+  <div class="popup" id="finalPopup">
+
+    <div class="popup-content">
+
+      <!-- Heart -->
+
+      
+
+      <!-- <div class="love">❤️</div> -->
+
+      <h1 style="font-size:2.2rem;color:#ffd6df;">
+        YAYYYYY ❤️✨
+      </h1>
+
+      <p>
+
+        Finallyyyyy 💖
+
+        <br><br>
+
+        You have no idea
+        how happy this makes me right now...
+
+      </p>
+
+      <p>
+
+        Even though we are far away,
+        you always feel close to my heart ❤️
+
+      </p>
+
+      <div class="special-line">
+
+        I want you in my life  
+        till my death ❤️
+
+      </div>
+
+      <p style="margin-top:25px;">
+
+        I want us to grow together,
+        support each other,
+        fight and solve things together,
+        and create beautiful memories together ✨
+
+      </p>
+
+      <div class="thank-you">
+
+        Thank you for choosing me ❤️
+
+      </div>
+<div class="heart-image-container">
+
+        <div class="heart-image" onclick="openImagePopup()">
+          ❤️
+        </div>
+
+        <p class="tap-text">
+          Tap the heart ❤️
+        </p>
+
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Image Popup -->
+
+  <div class="popup" id="imagePopup">
+
+    <div class="popup-content image-popup-content">
+
+      <span class="close-btn" onclick="closeImagePopup()">
+        ✖
+      </span>
+
+      <img src="AjeesSuve.jpeg" alt="Love Image" class="love-image">
+
+    </div>
+
+  </div>
+
   <!-- JavaScript -->
 
- <script>
+  <script>
 
-  function openPopup() {
+    function openPopup(){
 
-    document.getElementById("popup").style.display = "flex";
-  }
+      document.getElementById("popup").style.display="flex";
+    }
 
-  // Open second popup
+    function openFinalPopup(){
 
-  function openFinalPopup() {
+      document.getElementById("popup").style.display="none";
 
-    document.getElementById("popup").style.display = "none";
+      document.getElementById("finalPopup").style.display="flex";
+    }
 
-    document.getElementById("finalPopup").style.display = "flex";
-  }
+    function openImagePopup(){
 
-  // Funny Moving NO Button
+      document.getElementById("imagePopup").style.display="flex";
+    }
 
-  const noBtn = document.getElementById("noBtn");
+    function closeImagePopup(){
 
-  noBtn.addEventListener("mouseover", () => {
+      document.getElementById("imagePopup").style.display="none";
+    }
 
-    const randomX = Math.floor(Math.random() * 220) - 100;
+    // Moving NO button
 
-    const randomY = Math.floor(Math.random() * 120);
+    const noBtn=document.getElementById("noBtn");
 
-    noBtn.style.transform =
-      `translate(${randomX}px, ${randomY}px)`;
+    noBtn.addEventListener("mouseover",()=>{
 
-  });
+      const randomX=Math.floor(Math.random()*220)-100;
 
-</script>
+      const randomY=Math.floor(Math.random()*120);
+
+      noBtn.style.transform=
+      `translate(${randomX}px,${randomY}px)`;
+    });
+
+    // Music autoplay support
+
+    window.addEventListener('load',()=>{
+
+      const music=document.getElementById("bg-music");
+
+      music.play();
+
+      document.body.addEventListener('click',()=>{
+
+        music.play();
+
+      },{once:true});
+
+    });
+
+  </script>
 
 </body>
 

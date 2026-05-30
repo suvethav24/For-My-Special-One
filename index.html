@@ -15,7 +15,80 @@
     rel="stylesheet">
 
   <style>
+.romantic-heart-section{
+  position:relative;
+  margin-bottom:35px;
+}
 
+.beating-heart{
+  font-size:95px;
+  display:inline-block;
+  animation:heartbeat 1s infinite;
+  filter:drop-shadow(0 0 20px rgba(255,105,180,.8));
+  position:relative;
+  z-index:2;
+}
+
+@keyframes heartbeat{
+
+  0%{
+    transform:scale(1);
+  }
+
+  20%{
+    transform:scale(1.25);
+  }
+
+  40%{
+    transform:scale(1);
+  }
+
+  60%{
+    transform:scale(1.25);
+  }
+
+  100%{
+    transform:scale(1);
+  }
+}
+
+.heart-glow{
+  width:140px;
+  height:140px;
+  border-radius:50%;
+  position:absolute;
+  left:50%;
+  top:50%;
+  transform:translate(-50%,-50%);
+  background:rgba(255,182,193,.25);
+  animation:glowPulse 2s infinite;
+}
+
+@keyframes glowPulse{
+
+  0%{
+    transform:translate(-50%,-50%) scale(1);
+    opacity:.7;
+  }
+
+  50%{
+    transform:translate(-50%,-50%) scale(1.4);
+    opacity:.2;
+  }
+
+  100%{
+    transform:translate(-50%,-50%) scale(1);
+    opacity:.7;
+  }
+}
+
+.heart-message{
+  margin-top:15px;
+  color:#ffd6df;
+  font-size:1rem;
+  font-style:italic;
+  line-height:1.8;
+}
     *{
       margin:0;
       padding:0;
@@ -432,7 +505,6 @@
 
         <br><br>
 
-        No hugs.
         No hand holding.
         No walking together.
 
@@ -528,7 +600,20 @@
       <h1 style="font-size:2.2rem;color:#ffd6df;">
         YAYYYYY ❤️✨
       </h1>
+<div class="romantic-heart-section">
 
+  <div class="beating-heart">
+    ❤️
+  </div>
+
+  <div class="heart-glow"></div>
+
+  <!-- <p class="heart-message">
+    Every beat of my heart whispers your name,
+    Ajees ❤️
+  </p> -->
+
+</div>
       <p>
 
         Finallyyyyy 💖
@@ -563,12 +648,30 @@
 
       </p>
 
-      <div class="thank-you">
+     <p style="margin-top:25px;">
 
-        Thank you for choosing me ❤️
+  Maybe we haven't met yet...
 
-      </div>
-<div class="heart-image-container">
+  but you've already become one of the
+  most important parts of my life ❤️
+
+  <br><br>
+
+  Through every message,
+  every call,
+  every wait,
+  every smile...
+
+  my feelings for you only grew stronger.
+
+  <br><br>
+
+  I don't want just a chapter with you.
+
+  I want the whole story ❤️
+
+</p>
+<!-- <div class="heart-image-container">
 
         <div class="heart-image" onclick="openImagePopup()">
           ❤️
@@ -578,14 +681,14 @@
           Tap the heart ❤️
         </p>
 
-      </div>
+      </div> -->
     </div>
 
   </div>
 
   <!-- Image Popup -->
 
-  <div class="popup" id="imagePopup">
+  <!-- <div class="popup" id="imagePopup">
 
     <div class="popup-content image-popup-content">
 
@@ -597,7 +700,7 @@
 
     </div>
 
-  </div>
+  </div> -->
 
   <!-- JavaScript -->
 
@@ -615,15 +718,15 @@
       document.getElementById("finalPopup").style.display="flex";
     }
 
-    function openImagePopup(){
+    // function openImagePopup(){
 
-      document.getElementById("imagePopup").style.display="flex";
-    }
+    //   document.getElementById("imagePopup").style.display="flex";
+    // }
 
-    function closeImagePopup(){
+    // function closeImagePopup(){
 
-      document.getElementById("imagePopup").style.display="none";
-    }
+    //   document.getElementById("imagePopup").style.display="none";
+    // }
 
     // Moving NO button
 
